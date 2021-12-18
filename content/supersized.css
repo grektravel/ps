@@ -1,0 +1,87 @@
+#supersized-loader {
+    background: url("loading1.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 32px;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    position: absolute;
+    text-indent: -999em;
+    top: 40%;
+    width: 32px;
+    z-index: 0;
+}
+#supersized {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -999;
+	padding: 0px !important; 
+	margin: 0px !important;
+	overflow: auto !important
+}
+#supersized img {
+    border: medium none;
+    display: none;
+    height: auto;
+    outline: medium none;
+    position: relative;
+    width: auto;
+}
+#supersized.speed img {
+}
+#supersized.quality img {
+    image-rendering: optimizequality;
+}
+#supersized li {
+    display: block;
+    height: 100%;
+    left: 0;
+    list-style: outside none none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -30;
+}
+#supersized a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+#supersized li.prevslide {
+    z-index: -20;
+}
+#supersized li.activeslide {
+    z-index: -10;
+}
+#supersized li.image-loading {
+    background: url("loading1.gif") no-repeat scroll 40% center rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+}
+#supersized li.image-loading img {
+    visibility: hidden;
+}
+#supersized li.prevslide img, #supersized li.activeslide img {
+    display: inline;
+}
+/*Fix Supersized on iOS*/
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+#supersized { margin-left:0;}
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+#supersized { width:110% !important;}
+}
+
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+#supersized { margin-left:0; }
+}
